@@ -1,0 +1,20 @@
+[project]
+name = "llm-output-validation"
+version = "0.1.0"
+description = "Treating model output as untrusted input: seven demos, each with a failing-before and passing-after test."
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pydantic>=2.7",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["demos"]
+addopts = "--import-mode=importlib"
+
+[tool.uv]
+package = false
